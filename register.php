@@ -68,7 +68,7 @@ if(isset($_POST['btn-register'])){
     if(!$error){
         
         $sql = "INSERT INTO users (schoolname, username, email, phoneno, userpassword)
-        VALUES ('$schoolname','$username','$email','$phoneno','$password')";   
+        VALUES ('".$schoolname."','".$username."','".$email."','".$phoneno."','".$password."')";   
 
         if($conn->query($sql)===TRUE){
             $successmsg = "Registration successful";
